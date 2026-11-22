@@ -2,22 +2,20 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Product from "./pages/Product";
-import ProductDetail from "./pages/ProductDetail";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import OrderConfirmation from "./pages/OrderConfirmation";
-
-import "./App.css";
+import ProductDetail from "./pages/ProductDetail";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/ecommerce">
       <Routes>
         <Route path="/" element={<Product />} />
-        <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/confirmation" element={<OrderConfirmation />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
       </Routes>
     </BrowserRouter>
   );
