@@ -7,6 +7,8 @@ import Checkout from "./pages/Checkout";
 import OrderConfirmation from "./pages/OrderConfirmation";
 import ProductDetail from "./pages/ProductDetail";
 
+import "./App.css";
+
 function App() {
   return (
     <BrowserRouter basename="/ecommerce">
